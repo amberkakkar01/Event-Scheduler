@@ -30,6 +30,62 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <style type="text/css">
+    .mini-footer {
+        background: #ffffff;
+        text-align: center;
+        padding: 32px 0
+    }
+    
+    .mini-footer p a:hover {
+        color: #34bfa3
+    }
+    
+    @media (max-width:991px) {
+        .footer-menu {
+            padding-left: 0
+        }
+    }
+    
+    .sidenav {
+        width: 130px;
+        position: fixed;
+        z-index: 1;
+        top: 20px;
+        left: 10px;
+        background: #eee;
+        overflow-x: hidden;
+        padding: 8px 0;
+    }
+    
+    .sidenav a {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #2196F3;
+        display: block;
+    }
+    
+    .sidenav a:hover {
+        color: #064579;
+    }
+    
+    .main {
+        margin-left: 140px;
+        /* Same width as the sidebar + left position in px */
+        font-size: 28px;
+        /* Increased text to enable scrolling */
+        padding: 0px 10px;
+    }
+    
+    @media screen and (max-height: 450px) {
+        .sidenav {
+            padding-top: 15px;
+        }
+        .sidenav a {
+            font-size: 18px;
+        }
+    }
+    
     .social-buttons {
         display: inline-block;
         background: rgba(255, 255, 255, 0.5);
@@ -119,19 +175,6 @@
     .social-buttons .social-icon.instagram:hover {
         background-color: #ffffff;
         color: #cb2027;
-    }
-    
-    .social-buttons .social-icon.github {
-        font-size: 22px;
-        padding-top: 9px;
-        background-color: #4183c4;
-        color: #ffffff;
-        border-color: #4183c4;
-    }
-    
-    .social-buttons .social-icon.github:hover {
-        background-color: #ffffff;
-        color: #4183c4;
     }
     
     .social-buttons .social-icon.medium {
@@ -369,79 +412,84 @@
                 <!-- Footer -->
                 <footer class="w3-container w3-padding-32 w3-indigo">
                     <div class="w3-row-padding">
-                        <div class="social-buttons">
+                        <footer class="footer-area footer--light">
 
-                            <!-- facebook  Button -->
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="https://www.facebook.com/ieeeditu/" target="blank" class="social-margin">
-                                <div class="social-icon facebook">
-                                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                                </div>
-                            </a>
 
-                            <!-- instagram Button -->
-                            <a href="https://www.instagram.com/ieeeditu/?hl=en" target="blank" class="social-margin">
-                                <div class="social-icon instagram">
-                                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                                </div>
-                            </a>
-                            <!-- LinkedIn Button -->
-                            <a href="https://www.linkedin.com/company/ieeeditu" class="social-margin" target="blank">
-                                <div class="social-icon linkedin">
-                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
-                                </div>
-                            </a>
-                            <!-- Github Button -->
-                            <a href="https://github.com/ieeeditu" target="blank" class="social-margin">
-                                <div class="social-icon github">
-                                    <i class="fa fa-github-alt" aria-hidden="true"></i>
-                                </div>
-                            </a>
+                            <div class="social-buttons">
+                                <div class="mini-footer">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="copyright-text">
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <!-- facebook  Button -->
 
-                            <!-- mediumButton -->
-                            <a href="https://medium.com/ieeeditu" target="blank" class="social-margin">
-                                <div class="social-icon twitter">
-                                    <i class="fa fa-medium" aria-hidden="true"></i>
-                                </div>
-                            </a>
+                                                    <a href="https://www.facebook.com/ieeeditu/" target="blank" class="social-margin">
+                                                        <div class="social-icon facebook">
+                                                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                                                        </div>
+                                                    </a>
+
+                                                    <!-- instagram Button -->
+                                                    <a href="https://www.instagram.com/ieeeditu/?hl=en" target="blank" class="social-margin">
+                                                        <div class="social-icon instagram">
+                                                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                                                        </div>
+                                                    </a>
+                                                    <!-- LinkedIn Button -->
+                                                    <a href="https://www.linkedin.com/company/ieeeditu" class="social-margin" target="blank">
+                                                        <div class="social-icon linkedin">
+                                                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                                        </div>
+                                                    </a>
+
+                                                    <!-- mediumButton -->
+                                                    <a href="https://medium.com/ieeeditu" target="blank" class="social-margin">
+                                                        <div class="social-icon twitter">
+                                                            <i class="fa fa-medium" aria-hidden="true"></i>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+                                    </div>
+                        </footer>
+
+
+
+
+
 
 
                         </div>
-                    </div>
-                </footer>
-
-
-
-
-
-
-
-            </div>
-            <!-- end: page-container-->
+                        <!-- end: page-container-->
         </section>
         <!-- loader -->
         <div id="ftco-loader" class="show fullscreen">
             <svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg>
         </div>
-    </div>
+        </div>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/jquery.animateNumber.min.js"></script>
-    <script src="js/scrollax.min.js"></script>
-    <script src="js/bootstrap-datepicker.js"></script>
-    <script src="js/jquery.timepicker.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-    <script src="js/google-map.js"></script>
-    <script src="js/main.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery-migrate-3.0.1.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.easing.1.3.js"></script>
+        <script src="js/jquery.waypoints.min.js"></script>
+        <script src="js/jquery.stellar.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/aos.js"></script>
+        <script src="js/jquery.animateNumber.min.js"></script>
+        <script src="js/scrollax.min.js"></script>
+        <script src="js/bootstrap-datepicker.js"></script>
+        <script src="js/jquery.timepicker.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+        <script src="js/google-map.js"></script>
+        <script src="js/main.js"></script>
 
 </body>
 
