@@ -29,6 +29,26 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+    $(document).ready(function() {
+        var maxLength = 50;
+        $(".show-read-more").each(function() {
+            var myStr = $(this).text();
+            if ($.trim(myStr).length > maxLength) {
+                var newStr = myStr.substring(0, maxLength);
+                var removedStr = myStr.substring(maxLength, $.trim(myStr).length);
+                $(this).empty().html(newStr);
+                $(this).append(' <a href="javascript:void(0);" class="read-more">read more...</a>');
+                $(this).append('<span class="more-text">' + removedStr + '</span>');
+            }
+        });
+        $(".read-more").click(function() {
+            $(this).siblings(".more-text").contents().unwrap();
+            $(this).remove();
+        });
+    });
+</script>
 <style type="text/css">
     .mini-footer {
         background: #ffffff;
@@ -62,7 +82,7 @@
         text-decoration: none;
         font-size: 25px;
         color: #2196F3;
-        display: block;
+        display: inline-block;
     }
     
     .sidenav a:hover {
@@ -84,6 +104,18 @@
         .sidenav a {
             font-size: 18px;
         }
+    }
+    
+    .show-read-more .more-text {
+        display: none;
+    }
+    
+    .clamp {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical
     }
     
     .social-buttons {
@@ -219,7 +251,7 @@
                 <div class="row no-gutters">
                     <div class="col-md-12">
                         <div class="colorlib-navbar-brand">
-                            <img src="logoiee2.png" class="logo" style="width:13%;" class="w3-round"><br><br>
+                            <img src="logoiee2.png" class="img-fluid" alt="Responsive image" style="width:14%;" class="w3-round"><br><br>
                         </div>
                         <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
                     </div>
@@ -331,7 +363,7 @@
                                     <div><a href="#">Civil Block</a></div>
                                 </div>
                                 <h3 class="heading"><a href="#">Seminar on IOT</a></h3>
-                                <p>The Internet of things (IoT) is a system of interrelated computing devices, mechanical and digital machines provided with unique identifiers (UIDs) and the ability to transfer data over a network without requiring human-to-human
+                                <p class="show-read-more">The Internet of things (IoT) is a system of interrelated computing devices, mechanical and digital machines provided with unique identifiers (UIDs) and the ability to transfer data over a network without requiring human-to-human
                                     or human-to-computer interaction.</p>
                             </div>
                         </div>
@@ -345,7 +377,7 @@
                                     <div><a href="#">Vedanta 305</a></div>
                                 </div>
                                 <h3 class="heading"><a href="#">Linux Bootcamp</a></h3>
-                                <p>The Linux System Administrator bootcamp provides a thorough introduction to UNIX and Linux fundamentals as well as essential administration skills required to competently maintain a Linux system in a networked business
+                                <p class="show-read-more">The Linux System Administrator bootcamp provides a thorough introduction to UNIX and Linux fundamentals as well as essential administration skills required to competently maintain a Linux system in a networked business
                                     environment.
                                 </p>
                             </div>
@@ -363,7 +395,7 @@
                                     <div><a href="#">Civil Block</a></div>
                                 </div>
                                 <h3 class="heading"><a href="#">Seminar on Web Development</a></h3>
-                                <p>Web development refers to building, creating, and an maintaining websites. It includes aspects such as web design, web publishing, web programming, and database management.</p>
+                                <p class="show-read-more">Web development refers to building, creating, and an maintaining websites. It includes aspects such as web design, web publishing, web programming, and database management.</p>
                             </div>
                         </div>
                         <div class="blog-entry ftco-animate">
@@ -376,7 +408,7 @@
                                     <div><a href="#">Vedanta</a></div>
                                 </div>
                                 <h3 class="heading"><a href="#">Robotics</a></h3>
-                                <p>Robotics is an interdisciplinary research area at the interface of computer science and engineering. Robotics involves design, construction, operation, and use of robots. The goal of robotics is to design intelligent machines
+                                <p class="show-read-more">Robotics is an interdisciplinary research area at the interface of computer science and engineering. Robotics involves design, construction, operation, and use of robots. The goal of robotics is to design intelligent machines
                                     that can help.</p>
                             </div>
                         </div>
@@ -403,7 +435,7 @@
                                     <div><a href="#">Online</a></div>
                                 </div>
                                 <h3 class="heading"><a href="#">Blockchain Webinar</a></h3>
-                                <p>A blockchain,originally block chain, is a growing list of records, called blocks, that are linked using cryptography.Each block contains a cryptographic hash of the previous block, a timestamp, and transaction data (generally
+                                <p class="show-read-more">A blockchain,originally block chain, is a growing list of records, called blocks, that are linked using cryptography.Each block contains a cryptographic hash of the previous block, a timestamp, and transaction data (generally
                                     represented as a Merkle tree).</p>
                             </div>
                         </div>
@@ -421,7 +453,7 @@
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="copyright-text">
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
                                                     <!-- facebook  Button -->
 
                                                     <a href="https://www.facebook.com/ieeeditu/" target="blank" class="social-margin">
